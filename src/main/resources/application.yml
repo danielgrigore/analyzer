@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: analyzer
+  datasource:
+    url: jdbc:mysql://localhost:3306/analyzer
+    username: daniel
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8080
+  servlet:
+    context-path: /analyzer
