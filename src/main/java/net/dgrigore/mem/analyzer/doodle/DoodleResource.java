@@ -44,6 +44,7 @@ public class DoodleResource {
             doodleList.add(d);
         }
         this.dao.save(doodleList);
+        LOG.info("{} doodles saved.", doodleList.size());
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -59,7 +60,16 @@ public class DoodleResource {
             LOG.info("Loaded page {} ", page);
             this.dao.detach(doodles);
         }
+        sleep();
         LOG.info("Loaded {} doodles.", count);
         return Collections.emptyList();
+    }
+
+    private void sleep() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            Thread.interrupted();
+        }
     }
 }
