@@ -3,8 +3,8 @@ spring:
     name: analyzer
   datasource:
     url: jdbc:mysql://localhost:3306/analyzer
-    username: daniel
-    password: 
+    username: dgrigore
+    password: null
   jpa:
     hibernate:
       ddl-auto: update
