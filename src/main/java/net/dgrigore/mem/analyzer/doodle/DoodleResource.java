@@ -67,7 +67,7 @@ public class DoodleResource {
 
     private void sleep() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(20000);
         } catch (InterruptedException e) {
             Thread.interrupted();
         }
